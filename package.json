@@ -1,0 +1,34 @@
+{
+  "name": "ui-message",
+  "version": "0.0.1",
+  "description": "UI message component for JavaScript applications",
+  "main": "index.js",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "mocha": "^5.2.0",
+    "should": "^13.2.1"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/_mocha --require should ./test",
+    "build": "babel lib -d dist"
+  },
+  "keywords": [
+    "message",
+    "error",
+    "warning",
+    "information"
+  ],
+  "author": "VinceZK",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VinceZK/ui-message/issues"
+  },
+  "homepage": "https://github.com/VinceZK/ui-message#readme"
+}

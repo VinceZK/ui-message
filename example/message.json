@@ -1,0 +1,44 @@
+[
+  { "msgCat": "SYS",
+    "msgName": "SYSTEM_ERROR1",
+    "msgText": {
+      "EN": {"shortText": "System error 1 happened in %s!", "longText": "Markdown Text"},
+      "ZH": {"shortText": "系统错误1发生在 %s!", "longText": "长文本"}
+    }
+  },
+  { "msgCat": "SYS",
+    "msgName": "SYSTEM_ERROR2",
+    "msgText": {
+      "EN": {"shortText": "System error 2 happened in %s!", "longText": "Markdown Text"},
+      "ZH": {"shortText": "系统错误2发生在 %s!", "longText": "长文本"}
+    }
+  },
+  { "msgCat": "SYS",
+    "msgName": "SYSTEM_ERROR3",
+    "msgText": {
+      "EN": {"shortText": "System error 3 happened in %s!", "longText": "Markdown Text"},
+      "ZH": {"shortText": "系统错误3发生在 %s!", "longText": "长文本"}
+    }
+  },
+  { "msgCat": "APP",
+    "msgName": "APPLICATION_ERROR1",
+    "msgText": {
+      "EN": {"shortText": "Application error 1 happened in %s and %s!", "longText": "Markdown Text %s1 and %s2 and %s2 and %s1"},
+      "ZH": {"shortText": "应用错误1发生在 %s!", "longText": "长文本"}
+    }
+  },
+  { "msgCat": "APP",
+    "msgName": "APPLICATION_ERROR2",
+    "msgText": {
+      "EN": {"shortText": "Application error 2 happened!", "longText": "Markdown Text"},
+      "ZH": {"shortText": "应用错误2发生在 %s!", "longText": "长文本"}
+    }
+  },
+  { "msgCat": "APP",
+    "msgName": "APPLICATION_ERROR3",
+    "msgText": {
+      "EN": {"shortText": "Application error 3 happened in %s!", "longText": "Markdown Text"},
+      "ZH": {"shortText": "应用错误3发生在 %s!", "longText": "长文本"}
+    }
+  }
+]
