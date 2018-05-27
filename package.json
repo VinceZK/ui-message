@@ -1,6 +1,6 @@
 {
   "name": "ui-message",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "UI message component for JavaScript applications",
   "main": "index.js",
   "dependencies": {
@@ -25,6 +25,10 @@
     "warning",
     "information"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VinceZK/ui-message.git"
+  },
   "author": "VinceZK",
   "license": "MIT",
   "bugs": {
