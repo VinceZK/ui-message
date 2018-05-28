@@ -1,7 +1,7 @@
-const MsgFileStore = require('../dist/MsgFileStore').MsgFileStore;
-const MsgFileStoreAsync = require('../dist/MsgFileStoreAsync').MsgFileStoreAsync;
+const MsgFileStore = require('../index').MsgFileStore;
+const MsgFileStoreAsync = require('../index').MsgFileStoreAsync;
 const msgFile = './example/message.json';
-const Message = require('../dist/message').Message;
+const Message = require('../index').Message;
 
 describe("Message", function() {
     describe("Synchronous Message Reporting", function () {

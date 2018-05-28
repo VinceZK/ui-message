@@ -58,7 +58,7 @@ Message.prototype.reportShortText = function (msgCat, msgName, msgType, callback
 };
 
 /**
- * Report a message short text
+ * Report a message long text
  * @param msgCat
  * @param msgName
  * @param msgType
@@ -68,6 +68,7 @@ Message.prototype.reportShortText = function (msgCat, msgName, msgType, callback
  *            "msgType": "E",
  *            "msgLongText": "Markdown Text %s!"}`
  */
+//TODO store and display in markdown text
 Message.prototype.reportLongText = function (msgCat, msgName, msgType, callback) {
     _checkInputParameters(msgCat, msgName, msgType);
     var args = arguments;
