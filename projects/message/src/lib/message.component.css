@@ -1,0 +1,18 @@
+.alert.card-header {
+  margin-bottom: 0;
+}
+.card-danger {
+  border-color: #f5c6cb;
+}
+.card-warning {
+  border-color: #ffeeba;
+}
+.card-success {
+  border-color: #c3e6cb;
+}
+.card-info {
+  border-color: #bee5eb;
+}
+.dk-message {
+  margin-bottom: .5rem;
+}

@@ -1,4 +1,4 @@
-const MsgFileStore = require('../dist/MsgFileStore').MsgFileStore;
+const MsgFileStore = require('../dist/node-message/MsgFileStore').MsgFileStore;
 const msgFile = './example/message.json';
 
 describe("File System Message Storage Service", function() {

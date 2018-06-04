@@ -1,0 +1,11 @@
+<div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn dk-btn-lg btn-primary" (click)="addMessage('E')">Add Error</button>
+    <button type="button" class="btn dk-btn-lg btn-primary" (click)="addMessage('W')">Add Warning</button>
+    <button type="button" class="btn dk-btn-lg btn-primary" (click)="addMessage('S')">Add Success</button>
+    <button type="button" class="btn dk-btn-lg btn-primary" (click)="addMessage('I')">Add Information</button>
+    <button type="button" class="btn dk-btn-lg btn-primary" (click)="addMessage('X')">Add Exception</button>
+    <button type="button" class="btn dk-btn-lg btn-secondary" (click)="clearMessages()">Clear All</button>
+  </div>
+  <dk-message></dk-message>
+</div>
