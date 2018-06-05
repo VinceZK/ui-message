@@ -16,7 +16,13 @@ export class AppComponent {
     message.msgName = 'TEST';
     message.msgType = msgType;
     message.msgShortText = 'Test Short Message';
-    message.msgLongText = `<h3>Test Long Message with HTML format</h3>`;
+    message.msgLongText = `
+<h5>Symptom</h5>
+<p>You are not authorized to execute this operation</p>
+<h5>Reason</h5>
+<p>This may due to you are not granted with proper permission</p>
+<h5>Solution</h5>
+<p>Contact your system support to get the permission, or you can add permission of this operation through this <a href="#">APP</a></p>`;
 
     this.messageService.pushMessage(message);
   }

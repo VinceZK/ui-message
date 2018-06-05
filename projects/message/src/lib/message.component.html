@@ -9,7 +9,7 @@
       </button>
     </div>
 
-    <div class="collapse" [ngClass]="{'show': message.showLongText}">
+    <div *ngIf="message.msgLongText" class="collapse" [ngClass]="{'show': message.showLongText}">
       <div class="card-body" [innerHtml]="message.msgLongText">
       </div>
     </div>

@@ -55,6 +55,18 @@ describe("Message", function() {
             )
         });
 
+        it("should report a message short and long text in English with half placeholders", function() {
+          message.report('APP', 'APPLICATION_ERROR1','E', 'HELL').should.eql(
+            {
+              "msgCat": "APP",
+              "msgName": "APPLICATION_ERROR1",
+              "msgType": "E",
+              "msgShortText": "Application error 1 happened in HELL and !",
+              "msgLongText": "Markdown Text HELL and  and  and HELL"
+            }
+          )
+        });
+
         it("should return a null message", function(){
             should(message.reportShortText('APP1', 'APPLICATION_ERROR1','E', 'HELL')).eql(null);
             should(message.reportLongText('APP', 'APPLICATION_ERRORX','E', 'HELL')).eql(null);

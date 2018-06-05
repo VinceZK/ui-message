@@ -3,7 +3,6 @@ import {Message} from "./message.model";
 import {BehaviorSubject} from "rxjs/internal/BehaviorSubject";
 import {Observable} from "rxjs/internal/Observable";
 
-
 @Injectable({
   providedIn: 'root'
 })

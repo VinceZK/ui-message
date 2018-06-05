@@ -1,6 +1,6 @@
 {
   "name": "ui-message",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "UI message component for JavaScript applications",
   "main": "index.js",
   "scripts": {

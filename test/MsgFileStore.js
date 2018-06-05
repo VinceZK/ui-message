@@ -48,6 +48,17 @@ describe("File System Message Storage Service", function() {
         )
     });
 
+    it("should read a message short and longtext in English", function() {
+      msgStore.getMessage('SYS', 'SYSTEM_ERROR1','EN').should.eql(
+        {
+          "msgCat": "SYS",
+          "msgName": "SYSTEM_ERROR1",
+          "msgShortText": "System error 1 happened in %s!",
+          "msgLongText": "Markdown Text"
+        }
+      )
+    });
+
     it("should return empty message", function () {
         should(msgStore.getMessageShortText('APP', 'SYSTEM_ERROR1', 'EN')).eql(null);
     })
