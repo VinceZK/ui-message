@@ -6,9 +6,9 @@ It's always the main channel your system response to your users.
 UI Message helps you to make errors seem less failure on the user's end and more like cues for adjustment.
 
 UI Message is designed for Node and Angular application, it supports:
-1. Separate message maintenance with your application source code.
+1. Separate message data with application code.
 2. Support html-based long text.
-3. Support multiple language.
+3. Support multi-language.
 4. Use placeholders to embed runtime variables.
 
 ![UI-Message Demo](ui-message.png)
@@ -29,7 +29,7 @@ UI Message is designed for Node and Angular application, it supports:
    const message = new Message(msgStore, 'EN');
 
    function getSomething(req, res) {   
-     /* 'APP' is the message category; 'APPLICATION_ERROR' is the message name; 
+     /* 'LOGON' is the message category; 'USERID_PASSWORD_ERROR' is the message name; 
       * 'E' stands for  error message.
       * Current time is a variable that will replace the placeholder in the text. 
       */
@@ -58,7 +58,7 @@ UI Message is designed for Node and Angular application, it supports:
     })
    export class AppModule { }
    ```
-   In the "xxx.component.ts", import Message and MessageService:
+   In the "SignIn.component.ts", import Message and MessageService:
    ```typescript
     import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
     import {Message, MessageService} from 'ui-message/dist/message';
@@ -83,13 +83,13 @@ UI Message is designed for Node and Angular application, it supports:
     }
    ```
    
-   Place the message somewhere in your HTML template:
+   Place the message selector somewhere in your HTML template:
    ```html
    ...
    <dk-message></dk-message>
    ...
    ```
-   Result of above example: 
+   Result of the example: 
 ![Logon Page Demo](Logon.png)  
 
 ### Test
@@ -105,7 +105,7 @@ Message schema is defined as following:
     }
   }
 ```
-+ "msgCat" stands for message category, which is used to category messages.
++ "msgCat" stands for message category, which is used to categorize messages.
 + "msgName" is a meaningful name that identify the message in a specific category.
 + "msgText" store message short and long text in different languages.
 + In shortText, you can use placeholder "%s". 
