@@ -1,6 +1,6 @@
 {
   "name": "ui-message",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "UI message component for JavaScript applications",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,6 @@
     "ngtest": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prod": "node $NODE_DEBUG_OPTION server.js",
     "test": "./node_modules/mocha/bin/_mocha --require should ./test",
     "build": "babel lib -d dist/node-message"
   },

@@ -1,5 +1,6 @@
 const MsgFileStore = require('../index').MsgFileStore;
 const MsgFileStoreAsync = require('../index').MsgFileStoreAsync;
+const MsgArrayStore = require('../index').MsgArrayStore;
 const msgFile = './example/message.json';
 const Message = require('../index').Message;
 
@@ -134,4 +135,63 @@ describe("Message", function() {
             })
         })
     });
+
+    describe("Message Array Store for Browsers", function () {
+      let message;
+      before(function () {
+        let msgArray = [
+          { "msgCat": "SYS",
+            "msgName": "SYSTEM_ERROR1",
+            "msgText": {
+              "EN": {"shortText": "System error 1 happened in %s!", "longText": "Markdown Text"},
+              "ZH": {"shortText": "系统错误1发生在 %s!", "longText": "长文本"}
+            }
+          },
+          { "msgCat": "APP",
+            "msgName": "APPLICATION_ERROR1",
+            "msgText": {
+              "EN": {"shortText": "Application error 1 happened in %s and %s!", "longText": "Markdown Text %s1 and %s2 and %s2 and %s1"},
+              "ZH": {"shortText": "应用错误1发生在 %s!", "longText": "长文本"}
+            }
+          }
+        ];
+        let msgStore = new MsgArrayStore(msgArray);
+        message = new Message(msgStore, 'EN');
+      });
+
+      it("should report a message in English with placeholders", function() {
+        message.report('APP', 'APPLICATION_ERROR1','E', 'HELL', 'HEAVEN').should.eql(
+          {
+            "msgCat": "APP",
+            "msgName": "APPLICATION_ERROR1",
+            "msgType": "E",
+            "msgShortText": "Application error 1 happened in HELL and HEAVEN!",
+            "msgLongText": "Markdown Text HELL and HEAVEN and HEAVEN and HELL"
+          }
+        )
+      });
+
+      it("should report a message short text in English with placeholders", function() {
+        message.reportShortText('SYS', 'SYSTEM_ERROR1','E', 'HELL').should.eql(
+          {
+            "msgCat": "SYS",
+            "msgName": "SYSTEM_ERROR1",
+            "msgType": "E",
+            "msgShortText": "System error 1 happened in HELL!"
+          }
+        )
+      });
+
+      it("should report a message long text in English with placeholders", function() {
+        message.reportLongText('APP', 'APPLICATION_ERROR1','E', 'HELL', 'HEAVEN').should.eql(
+          {
+            "msgCat": "APP",
+            "msgName": "APPLICATION_ERROR1",
+            "msgType": "E",
+            "msgLongText": "Markdown Text HELL and HEAVEN and HEAVEN and HELL"
+          }
+        )
+      });
+
+    })
 });

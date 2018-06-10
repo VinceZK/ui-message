@@ -28,7 +28,7 @@ UI Message is designed for Node and Angular application, it supports:
    /* Instance a message object(in English) */
    const message = new Message(msgStore, 'EN');
 
-   function getSomething(req, res) {   
+   function logon(req, res) {   
      /* 'LOGON' is the message category; 'USERID_PASSWORD_ERROR' is the message name; 
       * 'E' stands for  error message.
       * Current time is a variable that will replace the placeholder in the text. 
@@ -72,10 +72,10 @@ UI Message is designed for Node and Angular application, it supports:
       logon(): void {
         this.logonService.logon(this.user.userid, this.user.password).subscribe(
           data => {
-            if (data.error) {
-              this.messageService.reportMessage(<Message>data.message);
+            if (data.err) {
+              this.messageService.report(<Message>data.err);
             } else  {
-              this.user = data;
+              this.user = data.user;
             } 
           }
         );
@@ -124,6 +124,21 @@ You need to implement 3 instance methods:
 3. getMessageLongText(msgCat, msgName, langu) /* Return long text only */
 
 In case your message store prefers async mode, then refer `lib/MsgFileStoreAsync.js`.
+### Server Side and Client Side
+Messages can either be generated from server side (Node), or from client side(Angular).
+No matter how you architecture your application, UI-message gives you the both favors. 
+
+When you import the messageService, you can report messages comes from server 
+side directly using `messageService.report(message: Message)`, or `messageService.add(message: Message)` 
+if you want to report multiple messages at same time. 
+
+In case messages comes from the client side, for example, a generic data conversion exception,
+you already hold your messages in a local array object. Then, you first set the messages array
+by calling method `messageService.setMessageStore(msgStore, 'EN')` in the service constructor.
+And now you can report your messages freely using method `messageService.reportMessage(msgCat, msgName, msgType, ...args)` and 
+`messageService.addMessage(msgCat, msgName, msgType, ...args)`.
+
+Refer the [code example](https://github.com/VinceZK/ui-message/blob/master/src/app/app.component.ts).
 
 ## License
 [The MIT License](http://opensource.org/licenses/MIT)
