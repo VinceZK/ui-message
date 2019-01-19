@@ -1,8 +1,24 @@
 {
-  "name": "message",
-  "version": "0.0.1",
+  "name": "ui-message-angular",
+  "version": "1.1.0",
   "peerDependencies": {
-    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
-  }
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VinceZK/ui-message.git"
+  },
+  "keywords": [
+    "message",
+    "error",
+    "warning",
+    "information"
+  ],
+  "author": "VinceZK",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VinceZK/ui-message/issues"
+  },
+  "homepage": "https://github.com/VinceZK/ui-message#readme"
 }

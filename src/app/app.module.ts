@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { MessageModule } from 'message';
+import { MessageModule } from 'ui-message-angular';
 
 @NgModule({
   declarations: [

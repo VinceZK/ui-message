@@ -73,5 +73,6 @@ export class MessageComponent implements OnInit {
       this.messages.forEach(message => message.showLongText = false );
       this.messages[idx].showLongText = true;
     }
+    return false; // To forbid page refresh when clicking the link
   }
 }
